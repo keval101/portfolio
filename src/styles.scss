@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+    --primary-color: #9A0680;
+    --primary-color-dark: #79018C;
+    --primary-color-darken: #4C0070;
+    --background: #160040;
+
+    --white-color: #fff;
+    --grey-color: #777;
+    --ligh-grey-1:#f7f7f7;
+    --dark-grey: #999; 
+    --dark-grey-1: #333; 
+
+    --sidebar-width: 25%;
+}
+
+* {
+    @apply m-0 p-0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 1.4rem;
+}
+
+body {
+    @apply box-border font-normal;
+    color: var(--white-color);
+    // background-color: var(--background);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 200px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--dark-grey-1); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-color-dark); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color-darken); 
+  }
+
