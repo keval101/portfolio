@@ -1,10 +1,10 @@
 .sidebar {
     width: var(--sidebar-width);
-    background-color: var(--background);
+    background-color: var(--darkbg);
 
     @media screen and (max-width: 600px){
         transform: translateX(-500px);
-        width: calc(2.5*var(--sidebar-width));
+        width: calc(3*var(--sidebar-width));
     }
 }
 
@@ -36,10 +36,5 @@
             width: 100%;
             transition: all 0.5s ease-out;
         }
-        // &:hover {
-        //     @apply cursor-pointer;
-        //     transform: translateX(10px);
-        //     transition: all 0.5s ease-out;
-        // }
     }
 }

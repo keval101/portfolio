@@ -15,7 +15,12 @@
     --dark-grey: #999; 
     --dark-grey-1: #333; 
 
-    --sidebar-width: 25%;
+    --sidebar-width: 20%;
+
+    --darkbg: #0a0d1d;
+    --dark2: #141e36;
+    --light1: #112857;
+    --lighter: #486da2;
 }
 
 * {
@@ -30,7 +35,7 @@ html {
 body {
     @apply box-border font-normal;
     color: var(--white-color);
-    // background-color: var(--background);
+    // background-color: var(--dark2);
 }
 
 ::-webkit-scrollbar {
