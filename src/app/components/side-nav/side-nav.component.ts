@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, HostListener, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-side-nav',
@@ -8,7 +8,20 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class SideNavComponent implements OnInit {
   @Input() openMenu: boolean
+  getScreenWidth: number;
   constructor() { }
+
+  @HostListener('window:resize', ['$event'])
+
+  onWindowResize() {
+    this.getScreenWidth = window.innerWidth;
+    // console.log(this.getScreenWidth);
+    if (window.screen.width > 600) {
+      this.openMenu = true;
+    } else {
+      this.openMenu = false;
+    }
+  }
 
   ngOnInit(): void {
     if (window.screen.width > 600) {

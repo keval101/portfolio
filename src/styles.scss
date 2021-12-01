@@ -4,11 +4,9 @@
 @import "tailwindcss/utilities";
 
 :root {
-    --primary-color: #9A0680;
-    --primary-color-dark: #79018C;
-    --primary-color-darken: #4C0070;
-    --background: #160040;
-
+    --primary-color: #ecb32b;
+    --primary-color-dark: #ED912B;
+    --secondary-color: #ED322C;
     --white-color: #fff;
     --grey-color: #777;
     --ligh-grey-1:#f7f7f7;
@@ -17,10 +15,7 @@
 
     --sidebar-width: 20%;
 
-    --darkbg: #0a0d1d;
-    --dark2: #141e36;
-    --light1: #112857;
-    --lighter: #486da2;
+    --darkbg: #19192E;
 }
 
 * {
@@ -30,6 +25,7 @@
 
 html {
     font-size: 1rem;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -40,7 +36,6 @@ body {
 
 ::-webkit-scrollbar {
     width: 10px;
-    height: 200px;
   }
   
   /* Track */
@@ -50,15 +45,55 @@ body {
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(--primary-color-dark); 
-    border-radius: 10px;
+    background: var(--primary-color); 
+    border-radius: 8px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-color-darken); 
+    background: var(--primary-color); 
   }
 
-  .section-padding {
-    @apply px-24;
+  .section-x-padding {
+    @apply px-12;
+
+    @media screen and (max-width: 600px){
+      @apply px-4;
+    }
+  }
+  .section-y-padding {
+    @apply pt-16;
+  }
+
+  .section-title {
+    @apply font-semibold italic relative inline-block;
+    font-size: 3.5rem;
+    color: #E1D9D1;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--secondary-color);
+        height: 4px;
+        width: 110%;
+        border-radius: 100px;
+
+        @media screen and (max-width: 600px){
+            height: 4px;
+            left: 2px;
+        }
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: var(--secondary-color);
+        height: 5px;
+        width: 5px;
+        border-radius: 100px;
+        transform: translateX(35px);
+      }
   }
