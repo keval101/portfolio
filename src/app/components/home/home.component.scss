@@ -1,3 +1,45 @@
 .home-section {
     // background-color: var(--primary-color-darken);
+    @apply relative;
+    .name {
+        @apply relative ;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-color);
+            width: 100%;
+            height: 10px;
+            box-shadow: 0 2px 10px var(--primary-color);
+            border-radius: 100px;
+            animation: line 1.2s ease-in;
+        }
+        &-type {
+            @apply pl-1 font-semibold;
+            color: var(--dark-grey);
+            font-size: 2rem;
+            line-height: 0rem;
+        }
+        &-title {
+            @apply font-semibold;
+            font-size: 6rem;
+            color: var(--white-color);
+            // text-shadow: 0 1px 4px var(--white-color);
+        }
+        &-description {
+            // color: var(--light-grey-1);
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@keyframes line {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
 }
