@@ -67,9 +67,13 @@ body {
   }
 
   .section-title {
-    @apply font-semibold italic relative inline-block;
+    @apply font-semibold italic relative inline-block mb-20;
     font-size: 3.5rem;
     color: #E1D9D1;
+    // color: black;
+    // -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    // -webkit-text-stroke-width: 1px;
+    // -webkit-text-stroke-color: var(--primary-color);
 
       &::before {
         content: '';
