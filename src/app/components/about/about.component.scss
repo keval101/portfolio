@@ -1,26 +1,80 @@
-.about-img {
-    @apply relative;
-    width: 300px;
-    height: 500px;
-    border-radius: 10px;
-    background-color: var(--darkbg);
-    z-index: 10;
+.about {
+    
+    &-section {
+        background-color: #151528;
 
-    img {
-        @apply w-full h-full;
-        border-radius: 10px;
+        @screen md-max {
+            height: max-content;
+        } 
     }
-    &::before {
-        @apply absolute;
-        width: 302px;
-        height: 502px;
-        transform: translate3d(-2px, -2px, 0);
-        content: '';
-        border-radius: 10px;
-        z-index: -1;
-        background: linear-gradient( 136deg ,#ED322C, transparent);
+
+    &-content {
+        @apply flex;
+
+        @screen md-max {
+            @apply flex-col;
+        }
     }
-}
-.about-section {
-    background-color: #151528;
+
+    &-img {
+        @apply relative;
+        width: 300px;
+        height: 500px;
+        border-radius: 10px;
+        background-color: var(--darkbg);
+        z-index: 10;
+    
+        img {
+            @apply w-full h-full;
+            border-radius: 10px;
+        }
+        &::before {
+            @apply absolute;
+            width: 302px;
+            height: 502px;
+            transform: translate3d(-2px, -2px, 0);
+            content: '';
+            border-radius: 10px;
+            z-index: -1;
+            background: linear-gradient( 136deg ,#ED322C, transparent);
+        }
+    }
+
+    &-text {
+        @apply ml-8 flex flex-col pt-8;
+        font-size: 1.3rem;
+
+        @screen md-max{
+            @apply ml-0;
+        }
+        p:not(:last-child){
+            @apply mb-8;
+        }
+    }
+
+    &-social-icon {
+        @apply flex mt-8 ml-1;
+
+        span {
+            @apply flex justify-center items-center cursor-pointer;
+            width: 60px;
+            height: 60px;
+            border-radius: 100px;
+            border: 2px solid var(--primary-color);
+
+            &:hover {
+                background-color: var(--primary-color);
+                transition: all 0.2s ease;
+                color: #000;
+            }
+        }
+        span:not(:last-child) {
+            @apply mr-10;
+        }
+
+        i {
+            font-size: 2rem;
+        }
+    }
+    
 }

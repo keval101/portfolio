@@ -2,14 +2,18 @@
     @apply w-full fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 1000;
 }
 
 .component {
     width: calc(100% - var(--sidebar-width));
     margin-left: var(--sidebar-width); 
 
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 768px) {
+        width: calc(100% - 1.5*var(--sidebar-width));
+        margin-left: calc(1.5 * var(--sidebar-width))
+    }
+    @screen sm-max{
        @apply w-full ml-0;
     }
 }

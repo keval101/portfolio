@@ -21,7 +21,7 @@
 
 * {
     @apply m-0 p-0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 html {
@@ -63,13 +63,21 @@ body {
     }
   }
   .section-y-padding {
-    @apply pt-16;
+    @apply py-8;
   }
 
   .section-title {
     @apply font-semibold italic relative inline-block mb-20;
     font-size: 3.5rem;
     color: #E1D9D1;
+
+    @screen md-max {
+      @apply mb-10;
+    }
+    @screen sm-max {
+      @apply mb-12;
+      font-size: 2.5rem;
+    }
     // color: black;
     // -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
     // -webkit-text-stroke-width: 1px;

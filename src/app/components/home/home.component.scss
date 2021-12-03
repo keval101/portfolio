@@ -20,7 +20,10 @@
             font-size: 3rem;
             line-height: 1rem;
 
-            @media screen and (max-width: 600px){
+            @screen md-max {
+                line-height: 2rem;
+            }
+            @screen sm-max{
                 font-size: 2rem;
             }
         }
@@ -28,13 +31,15 @@
             @apply font-bold;
             font-size: 5rem;
             color: var(--primary-color);
-            // text-shadow: 0 1px 4px var(--white-color);
-            @media screen and (max-width: 600px){
+
+            @screen md-max {
+                font-size: 4rem;
+            }
+            @screen sm-max{
                 font-size: 3rem;
             }
         }
         &-description {
-            // color: var(--light-grey-1);
             font-size: 1.2rem;
         }
     }

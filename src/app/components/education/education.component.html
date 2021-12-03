@@ -1,0 +1,18 @@
+<section id="education" class="section-y-padding section-x-padding education-section h-screen w-full">
+    <h1 class="section-title">Education</h1>
+
+    <div class="content-container">
+        <div class="education-content">
+            <div class="education-card" *ngFor="let education of educationData">
+                <h3 class="education-card-title">{{education.title}} <span class="education-card-class">({{education.class}})</span></h3>
+                <p class="education-card-school">{{education.school}}</p>
+                <p class="education-card-year">{{education.year}}</p>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="education-card">
+        <h3 class="education-card-title">Secondary School (10<sup>th</sup>)</h3>
+        <p class="education-card-school">Noble High School, Junagadh</p>
+        <p class="education-card-year">2016-2017</p>
+    </div> -->
+</section>

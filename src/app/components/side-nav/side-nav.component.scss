@@ -2,10 +2,13 @@
     width: var(--sidebar-width);
     background-color: var(--primary-color);
 
-    @media screen and (max-width: 888px){
+    // @media screen and (max-width: 888px){
+    //     width: calc(1.5*var(--sidebar-width));
+    // }
+    @screen md-max {
         width: calc(1.5*var(--sidebar-width));
     }
-    @media screen and (max-width: 600px){
+    @screen sm-max{
         transform: translateX(-500px);
         width: calc(3*var(--sidebar-width));
     }
