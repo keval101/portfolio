@@ -1,6 +1,41 @@
 .content-container {
-    @apply relative flex flex-col items-center;
+    @apply relative;
+
+    .p-tabview {
+        @apply flex;
+    }
+    .p-tabview-nav {
+        @apply flex flex-col;
+        width: 300px;
+    }
+    .p-tabview-panels {
+        @apply flex-grow ml-8 p-8;
+        background-color: var(--dark-grey);
+        color: var(--white-color);
+        // height: 445px;
+        height: max-content;
+    }
+    .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus ,
+    .content-container .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+        @apply shadow-none;
+    }
+    .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+        border: none;
+        border-radius: 0;
+        background-color: var(--dark-grey);
+        color: var(--white-color);
+    }
+    .p-tabview .p-tabview-nav li .p-tabview-nav-link:hover {
+        border-left: 2px solid var(--secondary-color);
+    }
+    .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link,
+    .p-tabview .p-tabview-nav li:not(.p-highlight):not(.p-disabled):hover .p-tabview-nav-link {
+        border-left: 4px solid var(--secondary-color);
+        color:#000;
+        background-color: var(--primary--color)
+    }
 }
+
 .education {
     &-section {
         background-color: var(--darkbg);
@@ -13,53 +48,83 @@
         }
     }
 
-    &-content {
-        @apply grid;
-        grid-template-columns: 380px 380px 380px;
-        grid-gap: 2rem;
-        grid-template-rows: auto;
-        
-        @screen 2xl-max {
-            grid-template-columns: 300px 300px 300px;
-        }
-        @screen xl-max {
-            grid-template-columns: 280px 280px 280px;
-        }
-        @screen md-max {
-            grid-template-columns: 1fr;
-        }
+    &-ul {
+        @apply relative pl-6;
 
-        @screen sm-max {
-            grid-template-columns: 1fr;
+        &:before {
+            content: '';
+            width: 2px;
+            height: 100%;
+            background: var(--secondary-color);
+            position: absolute;
+            top: 0;
+            left: 0;
         }
     }
-
-    &-card {
-        @apply flex flex-col relative rounded-md text-black text-left p-6 justify-center;
-        width: 100%;
-        height: 260px;
-        background-color: #E1D9D1;
-
-        &-title {
-            @apply font-bold mb-2;
-            font-size: 1.8rem;
-
-            @screen sm-max {
-                font-size: 1.5rem
-            }
+    &-li {
+        @apply relative;
+        &::before {
+            @apply absolute rounded-full;
+            content: '';
+            width: 14px;
+            height: 14px;
+            background: var(--white-color);
+            top: 16px;
+            left: -1.82rem;
         }
 
-        &-class {
-            font-size: 1.2rem
+        &:not(:last-child) {
+            @apply mb-8;
+        }
+        &-title {
+            @apply font-semibold;
+            font-size: 1.8rem;
+            color: var(--primary--color);
         }
         &-school {
-            @apply font-semibold mb-2;
-            color: rgba(0, 0, 0, 0.9);
+            @apply font-normal;
+            font-size: 1.2rem;
         }
+        &-duration {
+            color: var(--grey-color);
+        }
+    }
+}
 
-        &-year {
-            @apply font-semibold;
-            color: rgba(0,0,0,0.5);
+.work {
+    &-title {
+        @apply font-semibold;
+        color: var(--primary--color);
+        font-size: 1.8rem;
+    }
+    &-company {
+        @apply pl-8;
+        font-size: 1.2rem;
+    }
+}
+.code-icon,
+.technology-icon {
+    @apply mr-2;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+.skill {
+    &-detail {
+        .icons {
+            img {
+                width: 50px;
+                height: 50px;
+
+                &:not(:last-child) {
+                    @apply mr-4;
+                }
+            }
+
+            .azure-icon {
+                width: 50px;
+                height: 44px;
+            }
         }
     }
 }

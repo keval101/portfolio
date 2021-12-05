@@ -14,23 +14,23 @@ export class EducationComponent implements OnInit {
   ngOnInit(): void {
     this.educationData = [
       {
-        title: 'Secondary School',
-        class: '10th',
-        school: 'Noble High School, Junagadh',
-        year: '2016-2017'
+        title: 'Computer Science & Engineering',
+        school: 'Subhash Technical Campus',
+        location: 'Junagadh, Gujarat',
+        year: '2019-2022'
       },
       {
         title: 'Higher Secondary School',
-        class: '12th',
-        school: 'Noble High School, Junagadh',
+        school: 'Manash Vidhya Mandir',
+        location: 'Junagadh, Gujarat',
         year: '2017-2019'
       },
       {
-        title: 'Computer Science & Engineering',
-        class: 'BE',
-        school: 'Subhash Technical Campus, Junagadh',
-        year: '2019-2022'
-      },
+        title: 'Secondary School',
+        school: 'Noble High School',
+        location: 'Junagadh, Gujarat',
+        year: '2016-2017'
+      }
     ]
   }
 

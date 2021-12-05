@@ -30,7 +30,7 @@
         &-title {
             @apply font-bold;
             font-size: 5rem;
-            color: var(--primary-color);
+            color: var(--primary--color);
 
             @screen md-max {
                 font-size: 4rem;

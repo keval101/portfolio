@@ -2,6 +2,75 @@
     <h1 class="section-title">Education</h1>
 
     <div class="content-container">
+        <!-- Education Detail -->
+        <p-tabView>
+            <p-tabPanel header="Education" leftIcon="fas fa-graduation-cap">
+               <div class="education-detail">
+                    <ul class="education-ul">
+                        <li class="education-li flex flex-col w-full" *ngFor="let education of educationData">
+                            <h2 class="education-li-title">{{education.title}}</h2>
+                            <p class="education-li-school">{{education.school}}</p>
+                            <div class="flex mt-2 ">
+                                <div class="education-year education-li-duration mr-4">
+                                    <i class="far fa-calendar-alt mr-2"></i>
+                                    <span>{{education.year}}</span>
+                                </div>
+                                <div class="education-location education-li-duration ">
+                                    <i class="fas fa-map-marker-alt mr-2"></i>
+                                    <span>{{education.location}}</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+               </div>
+            </p-tabPanel>
+
+            <!-- Work Detail -->
+            <p-tabPanel header="Work Experience" leftIcon="fas fa-briefcase">
+                <div class="work-detail">
+                    <div class="flex items-center">
+                        <i class="fas fa-code code-icon"></i>
+                        <h2 class="work-title">Front End Developer</h2>
+                    </div>
+                    <p class="work-company">Softrefine Technology</p>
+                    <div class="flex mt-2 pl-8">
+                        <div class="education-year education-li-duration mr-4">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            <span class="work-duration">June 2020 - Present</span>
+                        </div>
+                        <div class="education-location education-li-duration ">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Junagadh, Gujarat</span>
+                        </div>
+                    </div>
+                </div>
+
+            </p-tabPanel>
+
+            <!-- Skill Detail -->
+            <p-tabPanel header="Skill" leftIcon="fas fa-code">
+                <div class="skill-detail">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cogs technology-icon"></i>
+                        <h2 class="work-title">Technologies</h2>
+                    </div>
+                    <div class="flex flex-wrap icons items-center">
+                        <img src="../../../assets/icons/icons8-html-5.svg" alt="HTML">
+                        <img src="../../../assets/icons/icons8-css3.svg" alt="CSS">
+                        <img src="../../../assets/icons/icons8-sass-avatar.svg" alt="SASS">
+                        <img src="../../../assets/icons/icons8-javascript.svg" alt="Java Script">
+                        <img src="../../../assets/icons/icons8-typescript.svg" alt="Type Script">
+                        <img src="../../../assets/icons/icons8-angularjs.svg" alt="Angular">
+                        <img src="../../../assets/icons/icons8-git.svg" alt="Git">
+                        <img src="../../../assets/icons/icons8-jira.svg" alt="Jira">
+                        <img src="../../../assets/icons/Azure-DevOps.svg" alt="Azure-DevOps" class="azure-icon">
+                    </div>
+                </div>
+            </p-tabPanel>
+
+        </p-tabView>
+    </div>
+    <!-- <div class="content-container">
         <div class="education-content">
             <div class="education-card" *ngFor="let education of educationData">
                 <h3 class="education-card-title">{{education.title}} <span class="education-card-class">({{education.class}})</span></h3>
@@ -10,7 +79,7 @@
             </div>
         </div>
     </div>
-    <!-- <div class="education-card">
+    <div class="education-card">
         <h3 class="education-card-title">Secondary School (10<sup>th</sup>)</h3>
         <p class="education-card-school">Noble High School, Junagadh</p>
         <p class="education-card-year">2016-2017</p>

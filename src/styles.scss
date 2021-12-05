@@ -4,14 +4,13 @@
 @import "tailwindcss/utilities";
 
 :root {
-    --primary-color: #ecb32b;
+    --primary--color: #ecb32b;
     --primary-color-dark: #ED912B;
     --secondary-color: #ED322C;
     --white-color: #fff;
-    --grey-color: #777;
+    --grey-color: rgba(255, 255, 255, 0.4);
     --ligh-grey-1:#f7f7f7;
-    --dark-grey: #999; 
-    --dark-grey-1: #333; 
+    --dark-grey: #33343d; 
 
     --sidebar-width: 20%;
 
@@ -46,13 +45,13 @@ body {
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(--primary-color); 
+    background: var(--primary--color); 
     border-radius: 8px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-color); 
+    background: var(--primary--color); 
   }
 
   .section-x-padding {
@@ -63,7 +62,7 @@ body {
     }
   }
   .section-y-padding {
-    @apply py-8;
+    @apply py-12;
   }
 
   .section-title {
@@ -81,7 +80,7 @@ body {
     // color: black;
     // -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
     // -webkit-text-stroke-width: 1px;
-    // -webkit-text-stroke-color: var(--primary-color);
+    // -webkit-text-stroke-color: var(--primary--color);
 
       &::before {
         content: '';
