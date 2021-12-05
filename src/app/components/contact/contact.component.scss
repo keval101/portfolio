@@ -1,0 +1,78 @@
+.contact-section {
+    background-color: #151528;
+    height: max-content;
+    @screen md-max {
+        height: max-content;
+    } 
+}
+
+.contact-form{
+    @apply flex items-center justify-center;
+
+    @screen md-max {
+        @apply pl-0;
+    }
+
+    @screen md-max {
+        @apply flex-col;
+    }
+    form {
+        width: 650px;
+
+        @screen md-max {
+            @apply w-full;
+        }
+    }
+    .p-inputtext:enabled:focus {
+        border-color: var(--primary--color);
+        box-shadow: none;
+    }
+    .p-float-label input:focus ~ label,
+    .p-float-label textarea:focus ~ label,
+    .p-float-label input.p-filled ~ label,
+    .p-float-label textarea.p-filled ~ label{
+        top: -1rem;
+        font-size: 1rem;
+        color: var(--primary--color);
+    }
+    .p-inputtext {
+        @apply w-full bg-transparent;
+        border-color: var(--grey-color);
+        color: var(--white-color);
+        &:enabled:hover {
+            border-color: var(--primary--color);
+        }
+    }
+    .input-group {
+        width: 100%;
+        &:not(:last-child) {
+            @apply mr-4;
+        }
+    }
+    .input-button {
+        .p-button {
+            @apply w-full;
+            background: var(--primary--color);
+            border: none;
+
+            &:hover {
+                background: var(--primary-color-dark);
+            }
+        }
+        .p-button:focus {
+            box-shadow: none;
+        }
+        .p-button:enabled:active {
+            border: none;
+        }
+    }
+}
+
+.contact-img {
+    width: 40%;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}

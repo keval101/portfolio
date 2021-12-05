@@ -1,12 +1,25 @@
+.education-section {
+    @screen sm-max {
+        height: max-content;
+    }
+}
 .content-container {
     @apply relative;
 
     .p-tabview {
         @apply flex;
+
+        @screen md-max {
+            @apply flex-col;
+        }
     }
     .p-tabview-nav {
         @apply flex flex-col;
         width: 300px;
+
+        @screen md-max {
+            @apply flex-row;
+        }
     }
     .p-tabview-panels {
         @apply flex-grow ml-8 p-8;
@@ -14,6 +27,10 @@
         color: var(--white-color);
         // height: 445px;
         height: max-content;
+
+        @screen md-max {
+            @apply ml-0 mt-4;
+        }
     }
     .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus ,
     .content-container .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
@@ -80,13 +97,17 @@
             @apply font-semibold;
             font-size: 1.8rem;
             color: var(--primary--color);
+
+            @screen md-max {
+                font-size: 1.2rem;
+            }
         }
         &-school {
             @apply font-normal;
             font-size: 1.2rem;
-        }
-        &-duration {
-            color: var(--grey-color);
+            @screen md-max {
+                font-size: 1rem;
+            }
         }
     }
 }
@@ -96,10 +117,22 @@
         @apply font-semibold;
         color: var(--primary--color);
         font-size: 1.8rem;
+
+        @screen md-max {
+            font-size: 1.2rem;
+        }
     }
     &-company {
         @apply pl-8;
         font-size: 1.2rem;
+        @screen md-max {
+            font-size: 1rem;
+        }
+    }
+    &-duration {
+        @screen md-max {
+            @apply flex-col; 
+        }
     }
 }
 .code-icon,
@@ -109,16 +142,20 @@
     color: var(--secondary-color);
 }
 
+.duration {
+    color: var(--grey-color);
+    @screen md-max {
+        font-size: 0.8rem;
+    }
+}
+
 .skill {
     &-detail {
         .icons {
             img {
+                @apply m-4;
                 width: 50px;
                 height: 50px;
-
-                &:not(:last-child) {
-                    @apply mr-4;
-                }
             }
 
             .azure-icon {

@@ -10,6 +10,11 @@ import { EducationComponent } from './components/education/education.component';
 
 //primeng
 import {TabViewModule} from 'primeng/tabview';
+import { ContactComponent } from './components/contact/contact.component';
+import {InputTextModule} from 'primeng/inputtext';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {ButtonModule} from 'primeng/button';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +23,18 @@ import {TabViewModule} from 'primeng/tabview';
     HomeComponent,
     AboutComponent,
     EducationComponent,
+    ContactComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     TabViewModule,
     BrowserAnimationsModule,
-  ],
+    InputTextModule,
+    InputTextareaModule,
+    ButtonModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

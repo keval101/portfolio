@@ -48,8 +48,10 @@
 @keyframes line {
     0% {
         width: 0%;
+        opacity: 0.2;
     }
     100% {
         width: 110%;
+        opacity: 1;
     }
 }
