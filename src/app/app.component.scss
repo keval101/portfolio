@@ -2,13 +2,16 @@
     @apply w-full fixed;
     top: 0;
     left: 0;
+}
+
+.zIndex {
     z-index: 1000;
 }
 
 .component {
     width: calc(100% - var(--sidebar-width));
     margin-left: var(--sidebar-width); 
-
+    z-index: 10;
     @media screen and (max-width: 768px) {
         width: calc(100% - 1.5*var(--sidebar-width));
         margin-left: calc(1.5 * var(--sidebar-width))
@@ -25,6 +28,7 @@
     width: 50px;
     height: 50px;
     background-color: var(--primary--color);
+    z-index: 1000;
     // padding-top: 18px;
 
     .line {
@@ -64,4 +68,5 @@
     width: 50px;
     height: 50px;
     font-size: 1.4rem;
+    z-index: 1000;
 }

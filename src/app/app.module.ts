@@ -7,6 +7,7 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { EducationComponent } from './components/education/education.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 //primeng
 import {TabViewModule} from 'primeng/tabview';
@@ -14,7 +15,6 @@ import { ContactComponent } from './components/contact/contact.component';
 import {InputTextModule} from 'primeng/inputtext';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {ButtonModule} from 'primeng/button';
-import { ProjectsComponent } from './components/projects/projects.component';
 
 @NgModule({
   declarations: [

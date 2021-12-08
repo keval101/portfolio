@@ -22,7 +22,7 @@
         height: 500px;
         border-radius: 10px;
         background-color: var(--darkbg);
-        z-index: 10;
+        z-index: 1;
     
         img {
             @apply w-full h-full;
