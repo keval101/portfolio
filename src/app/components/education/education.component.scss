@@ -1,8 +1,3 @@
-.education-section {
-    @screen sm-max {
-        height: max-content;
-    }
-}
 .content-container {
     @apply relative;
 
@@ -51,11 +46,19 @@
         color:#000;
         background-color: var(--primary--color)
     }
+    .p-tabview .p-tabview-nav {
+        background: none;
+        border: none;
+    }
 }
 
 .education {
     &-section {
         background-color: var(--darkbg);
+
+        @screen sm-max {
+            height: max-content;
+        }
         .section-title {
             @apply mb-8;
 

@@ -24,7 +24,6 @@ export class AppComponent implements OnInit, OnChanges{
     } else {
       this.isMobileScreen = false;
     }
-    console.log(this.getScreenHeight);
   }
   ngOnInit(): void {
     if (window.screen.width < 600) {
