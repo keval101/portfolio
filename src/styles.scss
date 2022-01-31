@@ -77,10 +77,6 @@ body {
       @apply mb-12;
       font-size: 2.5rem;
     }
-    // color: black;
-    // -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-    // -webkit-text-stroke-width: 1px;
-    // -webkit-text-stroke-color: var(--primary--color);
 
       &::before {
         content: '';
@@ -109,3 +105,8 @@ body {
         transform: translateX(35px);
       }
   }
+
+  .custom-container {
+    @apply mx-auto;
+    width: 80%;
+}

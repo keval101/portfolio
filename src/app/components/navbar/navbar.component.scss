@@ -1,0 +1,59 @@
+.navbar {
+    @apply flex justify-end items-center shadow-md w-full;
+    background-color: var(--darkbg);
+    height: 60px;
+    transition: all 0.5s ease;
+
+    @screen sm-max {
+       transform: translateY(-400px);
+    }
+    &-nav {
+        @apply flex relative;
+
+        &-item {
+            &-link {
+                @apply px-8 py-5 relative; 
+                transition: all 0.5s ease;
+
+                &::before {
+                    @apply absolute bottom-0 left-0;
+                    content: '';
+                    width: 0;
+                    height: 1px;
+                    background-color: var(--primary--color);
+                    transition: all 0.5s ease;
+                }
+                &:hover {
+                    color: var(--primary--color);
+                    transition: all 0.5s ease;
+                }
+                &.active {
+                    transition: all 0.5s ease;
+                    color: var(--primary--color);
+
+                    &::before {
+                        width: 100%;
+                        transition: all 0.5s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mobile-menu.navbar {
+    @apply justify-start block;
+    height: max-content;
+    background-color: var(--darkbg);
+    transition: all 0.5s ease;
+    transform: translateY(0px);
+    .navbar-nav {
+        @apply flex-col;
+    }
+    .navbar-nav-item {
+        @apply my-3;
+    }
+    .navbar-nav-item-link{
+        @apply py-3;
+    }
+}

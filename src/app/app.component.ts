@@ -18,7 +18,7 @@ export class AppComponent implements OnInit, OnChanges{
 
   onWindowResize() {
     this.getScreenWidth = window.innerWidth;
-    console.log(this.getScreenWidth);
+    // console.log(this.getScreenWidth);
     if (window.screen.width < 600) {
       this.isMobileScreen = true;
     } else {
@@ -46,5 +46,10 @@ export class AppComponent implements OnInit, OnChanges{
   }
   backToTop(): void {
     window.scrollTo(0,0)
+  }
+
+  menuClose(value): void {
+    this.openMenu = false;
+    console.log('hello');
   }
 }

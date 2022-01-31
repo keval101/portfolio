@@ -1,37 +1,39 @@
 <section id="contact" class="section-y-padding section-x-padding contact-section w-full">
-    <h1 class="section-title">Contact</h1>
+    <div class="custom-container">
+        <h1 class="section-title">Contact</h1>
 
-    <div class="contact-form">
-        <form>
-            <div class="flex mb-8">
-                <div class="input-group">
+        <div class="contact-form">
+            <form>
+                <div class="flex mb-8">
+                    <div class="input-group">
+                        <span class="p-float-label">
+                            <input id="float-input" type="text" pInputText>
+                            <label for="float-input">Firstname</label>
+                        </span>
+                    </div>
+                    <div class="input-group">
+                        <span class="p-float-label">
+                            <input id="float-input" type="text" pInputText>
+                            <label for="float-input">Lastname</label>
+                        </span>
+                    </div>
+                </div>
+                <div class="input-group mb-8">
                     <span class="p-float-label">
-                        <input id="float-input" type="text" pInputText> 
-                        <label for="float-input">Firstname</label>
+                        <input id="float-input" type="text" pInputText>
+                        <label for="float-input">Email</label>
                     </span>
                 </div>
-                <div class="input-group">
+                <div class="input-textarea mb-8">
                     <span class="p-float-label">
-                        <input id="float-input" type="text" pInputText> 
-                        <label for="float-input">Lastname</label>
+                        <textarea id="float-input" rows="5" cols="30" pInputTextarea></textarea>
+                        <label for="float-input">Message</label>
                     </span>
                 </div>
-            </div>
-            <div class="input-group mb-8">
-                <span class="p-float-label">
-                    <input id="float-input" type="text" pInputText> 
-                    <label for="float-input">Email</label>
-                </span>
-            </div>
-            <div class="input-textarea mb-8">
-                <span class="p-float-label">
-                    <textarea id="float-input" rows="5" cols="30" pInputTextarea></textarea>
-                    <label for="float-input">Message</label>
-                </span>
-            </div>
-            <div class="input-button">
-                <button pButton type="button" label="Submit" ></button>
-            </div>
-        </form>
+                <div class="input-button">
+                    <button pButton type="button" label="Submit"></button>
+                </div>
+            </form>
+        </div>
     </div>
 </section>
