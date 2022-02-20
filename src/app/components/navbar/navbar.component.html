@@ -1,18 +1,7 @@
-<!-- <div class="sidebar fixed flex relative justify-center h-screen items-center" [ngClass]="{showMenu : openMenu, hideMenu : !openMenu}">
-    <ul class="nav">
-        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Service</a></li>
-        <li class="nav-item"><a href="#projects" class="nav-link">Project</a></li>
-        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
-
-    <p class="copyright-text">Copyright © 2021, Keval Vadhiya</p>
-
-</div> -->
-
 <div class="navbar" [ngClass]="{'mobile-menu' : openMenu}">
+    <div class="ml-40 flex-1">
+        <img src="../../../assets/images/logo.png" class="logo">
+    </div>
     <ul class="navbar-nav">
         <li class="navbar-nav-item">
             <a href="#home" class="navbar-nav-item-link" [ngClass]="{'active': scroll >= 0 && scroll < 175}" (click)='onMenuClick()'>Home</a>
@@ -24,9 +13,9 @@
             <a href="#education" class="navbar-nav-item-link"
                 [ngClass]="{'active': scroll >= 348 && scroll < 541}" (click)='onMenuClick()'>Education</a>
         </li>
-        <li class="navbar-nav-item">
+        <!-- <li class="navbar-nav-item">
             <a href="#service" class="navbar-nav-item-link" (click)='onMenuClick()'>Service</a>
-        </li>
+        </li> -->
         <li class="navbar-nav-item">
             <a href="#projects" class="navbar-nav-item-link"
                 [ngClass]="{'active': scroll >= 541 && scroll < 810}" (click)='onMenuClick()'>Project</a>

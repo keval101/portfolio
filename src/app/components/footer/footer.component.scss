@@ -1,0 +1,10 @@
+.footer {
+    @apply flex justify-center items-center;
+    height: 60px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.name {
+    @apply ml-1;
+    color: var(--primary--color);
+}

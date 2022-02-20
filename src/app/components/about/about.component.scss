@@ -41,7 +41,7 @@
     }
 
     &-text {
-        @apply ml-8 flex flex-col pt-8;
+        @apply ml-16 flex flex-col pt-8;
         font-size: 1.3rem;
 
         @screen md-max{

@@ -2,7 +2,7 @@
     <div class="custom-container">
         <h1 class="section-title">Projects</h1>
 
-        <div class="project-container">
+        <!-- <div class="project-container">
             <div class="project-card">
                 <div class="project-card-image">
                     <img src="../../../assets/images/natours.png" alt="natours">
@@ -55,7 +55,7 @@
 
             <div class="project-card">
                 <div class="project-card-image">
-                    <img src="../../../assets/images/nexters.png" alt="natours">
+                    <img src="../../../assets/images/nexterss.png" alt="natours">
 
                 </div>
 
@@ -85,7 +85,7 @@
 
             <div class="project-card">
                 <div class="project-card-image">
-                    <img src="../../../assets/images/trillo.png" alt="natours">
+                    <img src="../../../assets/images/trilloo.png" alt="natours">
                 </div>
 
                 <div class="project-card-detail">
@@ -108,6 +108,29 @@
                         <button class="rounded-full outline-button">Source Code</button>
                     </div>
 
+                </div>
+            </div>
+        </div> -->
+    
+        <div class="project-container">
+            <div class="project-card" *ngFor = "let project of projects">
+                <div class="project-card-image">
+                    <img src="{{project.image}}">
+                </div>
+
+                <div class="project-card-detail">
+                    <div class="project-card-text">
+                        {{project.detailText}}
+                    </div>
+
+                    <div class="project-card-tag">
+                        <span *ngFor="let tag of project.tags">{{tag}}</span>
+                    </div>
+
+                    <div class="project-card-button flex">
+                        <button class="mr-4 fill-button">Live Demo</button>
+                        <button class="outline-button">Source Code</button>
+                    </div>
                 </div>
             </div>
         </div>

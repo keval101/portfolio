@@ -12,8 +12,8 @@
                             <li class="education-li flex flex-col w-full" *ngFor="let education of educationData">
                                 <h2 class="education-li-title">{{education.title}}</h2>
                                 <p class="education-li-school">{{education.school}}</p>
-                                <div class="flex mt-2 ">
-                                    <div class="education-year duration mr-4">
+                                <div class="flex mt-2 sm-max:flex-col">
+                                    <div class="education-year duration mr-4 sm-max:mb-2">
                                         <i class="far fa-calendar-alt mr-2"></i>
                                         <span>{{education.year}}</span>
                                     </div>
@@ -57,15 +57,15 @@
                             <h2 class="work-title">Technologies</h2>
                         </div>
                         <div class="flex flex-wrap icons items-center">
-                            <img src="../../../assets/icons/icons8-html-5.svg" alt="HTML">
-                            <img src="../../../assets/icons/icons8-css3.svg" alt="CSS">
-                            <img src="../../../assets/icons/icons8-sass-avatar.svg" alt="SASS">
-                            <img src="../../../assets/icons/icons8-javascript.svg" alt="Java Script">
-                            <img src="../../../assets/icons/icons8-typescript.svg" alt="Type Script">
-                            <img src="../../../assets/icons/icons8-angularjs.svg" alt="Angular">
-                            <img src="../../../assets/icons/icons8-git.svg" alt="Git">
-                            <img src="../../../assets/icons/icons8-jira.svg" alt="Jira">
-                            <img src="../../../assets/icons/Azure-DevOps.svg" alt="Azure-DevOps" class="azure-icon">
+                            <img src="assets/icons/icons8-html-5.svg" alt="HTML">
+                            <img src="assets/icons/icons8-css3.svg" alt="CSS">
+                            <img src="assets/icons/icons8-sass-avatar.svg" alt="SASS">
+                            <img src="assets/icons/icons8-javascript.svg" alt="Java Script">
+                            <img src="assets/icons/icons8-typescript.svg" alt="Type Script">
+                            <img src="assets/icons/icons8-angularjs.svg" alt="Angular">
+                            <img src="assets/icons/icons8-git.svg" alt="Git">
+                            <img src="assets/icons/icons8-jira.svg" alt="Jira">
+                            <img src="assets/icons/Azure-DevOps.svg" alt="Azure-DevOps" class="azure-icon">
                         </div>
                     </div>
                 </p-tabPanel>
