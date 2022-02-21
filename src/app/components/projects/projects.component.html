@@ -1,24 +1,24 @@
-<section id="projects" class="section-y-padding section-x-padding project-section h-screen w-full">
+<section id="projects" class="section-y-padding section-x-padding project__section h-screen w-full">
     <div class="custom-container">
         <h1 class="section-title">Projects</h1>
 
-        <div class="project-container">
-            <div class="project-card" *ngFor = "let project of projects">
-                <div class="project-card-image">
+        <div class="project__container">
+            <div class="project__card" *ngFor = "let project of projects">
+                <div class="project__card-image">
                     <img src="{{project.image}}">
                 </div>
 
-                <div class="project-card-detail">
-                    <div class="project-card-text">
+                <div class="project__card-detail">
+                    <div class="project__card-detail--text">
                         {{project.detailText}}
                     </div>
 
-                    <div class="project-card-tag">
+                    <div class="project__card-tag">
                         <span *ngFor="let tag of project.tags">{{tag}}</span>
                     </div>
 
-                    <div class="project-card-button flex">
-                        <button class="mr-4 fill-button" (click)="openLink(project.liveDemo)">Live Demo</button>
+                    <div class="project__card-button flex">
+                        <button class="mr-4" (click)="openLink(project.liveDemo)">Live Demo</button>
                         <button class="outline-button" (click)="openLink(project.sourceCode)">Source Code</button>
                     </div>
                 </div>

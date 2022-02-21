@@ -1,58 +1,6 @@
-.content-container {
-    @apply relative;
-
-    .p-tabview {
-        @apply flex;
-
-        @screen md-max {
-            @apply flex-col;
-        }
-    }
-    .p-tabview-nav {
-        @apply flex flex-col;
-        width: 300px;
-    }
-    .p-tabview-panels {
-        @apply flex-grow ml-8 p-8;
-        background-color: var(--dark-grey);
-        color: var(--white-color);
-        // height: 445px;
-        height: max-content;
-
-        @screen md-max {
-            @apply ml-0 mt-4;
-        }
-    }
-    .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus ,
-    .content-container .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
-        @apply shadow-none;
-    }
-    .p-tabview .p-tabview-nav li .p-tabview-nav-link {
-        border: none;
-        border-radius: 0;
-        background-color: var(--dark-grey);
-        color: var(--white-color);
-    }
-    .p-tabview .p-tabview-nav li .p-tabview-nav-link:hover {
-        border-left: 2px solid var(--secondary-color);
-    }
-    .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link,
-    .p-tabview .p-tabview-nav li:not(.p-highlight):not(.p-disabled):hover .p-tabview-nav-link {
-        border-left: 4px solid var(--secondary-color);
-        color:#000;
-        background-color: var(--primary--color)
-    }
-    .p-tabview .p-tabview-nav {
-        background: none;
-        border: none;
-    }
-    .p-tabview .p-tabview-nav li {
-        width: 300px;
-    }
-}
-
 .education {
-    &-section {
+
+    &__section {
         background-color: var(--darkbg);
 
         @screen sm-max {
@@ -67,7 +15,60 @@
         }
     }
 
-    &-ul {
+    &__container {
+        @apply relative;
+    
+        .p-tabview {
+            @apply flex;
+    
+            @screen md-max {
+                @apply flex-col;
+            }
+        }
+        .p-tabview-nav {
+            @apply flex flex-col;
+            width: 300px;
+        }
+        .p-tabview-panels {
+            @apply flex-grow ml-8 p-8;
+            background-color: var(--dark-grey);
+            color: var(--white-color);
+            // height: 445px;
+            height: max-content;
+    
+            @screen md-max {
+                @apply ml-0 mt-4;
+            }
+        }
+        .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus ,
+        .content-container .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+            @apply shadow-none;
+        }
+        .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+            border: none;
+            border-radius: 0;
+            background-color: var(--dark-grey);
+            color: var(--white-color);
+        }
+        .p-tabview .p-tabview-nav li .p-tabview-nav-link:hover {
+            border-left: 2px solid var(--secondary-color);
+        }
+        .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link,
+        .p-tabview .p-tabview-nav li:not(.p-highlight):not(.p-disabled):hover .p-tabview-nav-link {
+            border-left: 4px solid var(--secondary-color);
+            color:#000;
+            background-color: var(--primary--color)
+        }
+        .p-tabview .p-tabview-nav {
+            background: none;
+            border: none;
+        }
+        .p-tabview .p-tabview-nav li {
+            width: 300px;
+        }
+    }
+
+    &__items {
         @apply relative pl-6;
 
         &:before {
@@ -79,43 +80,45 @@
             top: 0;
             left: 0;
         }
-    }
-    &-li {
-        @apply relative;
-        &::before {
-            @apply absolute rounded-full;
-            content: '';
-            width: 14px;
-            height: 14px;
-            background: var(--white-color);
-            top: 16px;
-            left: -1.82rem;
-        }
 
-        &:not(:last-child) {
-            @apply mb-8;
-        }
-        &-title {
-            @apply font-semibold;
-            font-size: 1.8rem;
-            color: var(--primary--color);
-
-            @screen md-max {
+        &-item {
+            @apply relative;
+            &::before {
+                @apply absolute rounded-full;
+                content: '';
+                width: 14px;
+                height: 14px;
+                background: var(--white-color);
+                top: 16px;
+                left: -1.82rem;
+            }
+    
+            &:not(:last-child) {
+                @apply mb-8;
+            }
+            &--title {
+                @apply font-semibold;
+                font-size: 1.8rem;
+                color: var(--primary--color);
+    
+                @screen md-max {
+                    font-size: 1.2rem;
+                }
+            }
+            &--school {
+                @apply font-normal;
                 font-size: 1.2rem;
-            }
-        }
-        &-school {
-            @apply font-normal;
-            font-size: 1.2rem;
-            @screen md-max {
-                font-size: 1rem;
+                @screen md-max {
+                    font-size: 1rem;
+                }
             }
         }
     }
+
 }
 
 .work {
-    &-title {
+    &__title {
         @apply font-semibold;
         color: var(--primary--color);
         font-size: 1.8rem;
@@ -124,14 +127,14 @@
             font-size: 1.2rem;
         }
     }
-    &-company {
+    &__company {
         @apply pl-8;
         font-size: 1.2rem;
         @screen md-max {
             font-size: 1rem;
         }
     }
-    &-duration {
+    &__duration {
         @screen md-max {
             @apply flex-col; 
         }
@@ -144,7 +147,7 @@
     color: var(--secondary-color);
 }
 
-.duration {
+.duration-text {
     color: var(--grey-color);
     @screen md-max {
         font-size: 0.8rem;
@@ -152,7 +155,7 @@
 }
 
 .skill {
-    &-detail {
+    &__detail {
         .icons {
             img {
                 @apply m-4;

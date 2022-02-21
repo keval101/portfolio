@@ -1,6 +1,6 @@
 .about {
     
-    &-section {
+    &__section {
         background-color: #151528;
 
         @screen md-max {
@@ -8,7 +8,7 @@
         } 
     }
 
-    &-content {
+    &__content {
         @apply flex;
 
         @screen md-max {
@@ -16,7 +16,7 @@
         }
     }
 
-    &-img {
+    &__img {
         @apply relative;
         width: 300px;
         height: 500px;
@@ -40,7 +40,7 @@
         }
     }
 
-    &-text {
+    &__text {
         @apply ml-16 flex flex-col pt-8;
         font-size: 1.3rem;
 
@@ -52,7 +52,7 @@
         }
     }
 
-    &-social-icon {
+    &__social {
         @apply flex mt-8 ml-1;
 
         span {

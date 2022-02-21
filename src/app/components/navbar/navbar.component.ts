@@ -17,7 +17,6 @@ export class NavbarComponent implements OnInit{
   ngOnInit(): void {
     this.renderer.listen(window, 'scroll', ($event) => {
       this.scroll = (window.scrollY / this.sections);
-      console.log(this.scroll);
    })
   }
 

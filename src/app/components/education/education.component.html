@@ -1,23 +1,23 @@
-<section id="education" class="section-y-padding section-x-padding education-section h-screen w-full">
+<section id="education" class="section-y-padding section-x-padding education__section h-screen w-full">
     <div class="custom-container">
 
         <h1 class="section-title">Education</h1>
 
-        <div class="content-container">
+        <div class="education__container">
             <p-tabView>
                 <!-- Education Detail -->
                 <p-tabPanel header="Education" leftIcon="fas fa-graduation-cap">
-                    <div class="education-detail">
-                        <ul class="education-ul">
-                            <li class="education-li flex flex-col w-full" *ngFor="let education of educationData">
-                                <h2 class="education-li-title">{{education.title}}</h2>
-                                <p class="education-li-school">{{education.school}}</p>
+                    <div class="education__detail">
+                        <ul class="education__items">
+                            <li class="education__items-item flex flex-col w-full" *ngFor="let education of educationData">
+                                <h2 class="education__items-item--title">{{education.title}}</h2>
+                                <p class="education__items-item--school">{{education.school}}</p>
                                 <div class="flex mt-2 sm-max:flex-col">
-                                    <div class="education-year duration mr-4 sm-max:mb-2">
+                                    <div class="duration-text mr-4 sm-max:mb-2">
                                         <i class="far fa-calendar-alt mr-2"></i>
                                         <span>{{education.year}}</span>
                                     </div>
-                                    <div class="education-location duration">
+                                    <div class="duration-text">
                                         <i class="fas fa-map-marker-alt mr-2"></i>
                                         <span>{{education.location}}</span>
                                     </div>
@@ -29,18 +29,18 @@
 
                 <!-- Work Detail -->
                 <p-tabPanel header="Work Experience" leftIcon="fas fa-briefcase">
-                    <div class="work-detail">
+                    <div class="work__detail">
                         <div class="flex items-center">
                             <i class="fas fa-code code-icon"></i>
-                            <h2 class="work-title">Front End Developer</h2>
+                            <h2 class="work__title">Front End Developer</h2>
                         </div>
-                        <p class="work-company">Softrefine Technology</p>
-                        <div class="flex mt-2 pl-8 work-duration">
-                            <div class="education-year duration mr-4 sm-max:mb-2">
+                        <p class="work__company">Softrefine Technology</p>
+                        <div class="flex mt-2 pl-8 work__duration">
+                            <div class="duration-text mr-4 sm-max:mb-2">
                                 <i class="far fa-calendar-alt mr-2"></i>
-                                <span class="work-duration">June 2020 - Present</span>
+                                <span class="work__duration">June 2020 - Present</span>
                             </div>
-                            <div class="education-location duration ">
+                            <div class="duration-text">
                                 <i class="fas fa-map-marker-alt mr-2"></i>
                                 <span>Junagadh, Gujarat</span>
                             </div>
@@ -51,10 +51,10 @@
 
                 <!-- Skill Detail -->
                 <p-tabPanel header="Skill" leftIcon="fas fa-code">
-                    <div class="skill-detail">
+                    <div class="skill__detail">
                         <div class="flex items-center mb-4">
                             <i class="fas fa-cogs technology-icon"></i>
-                            <h2 class="work-title">Technologies</h2>
+                            <h2 class="work__title">Technologies</h2>
                         </div>
                         <div class="flex flex-wrap icons items-center">
                             <img src="assets/icons/icons8-html-5.svg" alt="HTML">
