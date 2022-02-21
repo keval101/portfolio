@@ -109,4 +109,7 @@ body {
   .custom-container {
     @apply mx-auto;
     width: 80%;
-}
+    @screen sm-max {
+      width: 95%;
+    }
+  }

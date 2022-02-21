@@ -15,7 +15,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import {InputTextModule} from 'primeng/inputtext';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {ButtonModule} from 'primeng/button';
-
+import {TooltipModule} from 'primeng/tooltip';
+import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import {ButtonModule} from 'primeng/button';
     EducationComponent,
     ContactComponent,
     ProjectsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import {ButtonModule} from 'primeng/button';
     BrowserAnimationsModule,
     InputTextModule,
     InputTextareaModule,
-    ButtonModule
+    ButtonModule,
+    TooltipModule
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-<div class="sticky-navbar" style="position: sticky; top: 0; z-index: 1000;">
+<div class="sticky-navbar" style="width: 100%; position: fixed; top: 0; z-index: 1000;">
   <app-navbar [openMenu]="openMenu" (menuClose)="menuClose($event)"></app-navbar>
 </div>
 
@@ -19,3 +19,7 @@
 <button class="top-toggle" (click)="backToTop()">
   <i class="fas fa-arrow-up"></i>
 </button>
+
+<div>
+  <app-footer></app-footer>
+</div>
