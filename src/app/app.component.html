@@ -1,25 +1,27 @@
-<div class="sticky-navbar" style="width: 100%; position: fixed; top: 0; z-index: 1000;">
-  <app-navbar [openMenu]="openMenu" (menuClose)="menuClose($event)"></app-navbar>
+
+
+<div *ngIf="!isLoading">
+  <div class="sticky-navbar" style="width: 100%; position: fixed; top: 0; z-index: 1000;">
+    <app-navbar [openMenu]="openMenu" (menuClose)="menuClose($event)"></app-navbar>
+  </div>
+
+  <div class="app__sections">
+    <app-home></app-home>
+    <app-about></app-about>
+    <app-education></app-education>
+    <app-projects></app-projects>
+    <app-contact></app-contact>
+  </div>
+
+  <button class="menu-toggle" *ngIf="isMobileScreen" (click)="openSidebar()" [ngClass]="{paddingClass: openMenu}">
+    <span class="line" [ngClass]="{line1: openMenu}"></span>
+    <span class="line" [ngClass]="{line2: openMenu}"></span>
+    <span class="line" [ngClass]="{line3: openMenu}"></span>
+  </button>
+
+  <div class="app__footer">
+    <app-footer></app-footer>
+  </div>
 </div>
 
-<div>
-  <app-home></app-home>
-  <app-about></app-about>
-  <app-education></app-education>
-  <app-projects></app-projects>
-  <app-contact></app-contact>
-</div>
-
-<button class="menu-toggle" *ngIf="isMobileScreen" (click)="openSidebar()" [ngClass]="{paddingClass: openMenu}">
-  <span class="line" [ngClass]="{line1: openMenu}"></span>
-  <span class="line" [ngClass]="{line2: openMenu}"></span>
-  <span class="line" [ngClass]="{line3: openMenu}"></span>
-</button>
-
-<button class="top-toggle" (click)="backToTop()">
-  <i class="fas fa-arrow-up"></i>
-</button>
-
-<div>
-  <app-footer></app-footer>
-</div>
+<app-loading-page *ngIf="isLoading"></app-loading-page>

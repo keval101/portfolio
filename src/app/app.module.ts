@@ -17,6 +17,7 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 import {ButtonModule} from 'primeng/button';
 import {TooltipModule} from 'primeng/tooltip';
 import { FooterComponent } from './components/footer/footer.component';
+import { LoadingPageComponent } from './components/loading-page/loading-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ContactComponent,
     ProjectsComponent,
     FooterComponent,
+    LoadingPageComponent,
   ],
   imports: [
     BrowserModule,

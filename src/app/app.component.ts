@@ -13,6 +13,7 @@ export class AppComponent implements OnInit, OnChanges{
   getScreenWidth: number;
   isScrollDown: boolean;
   getScreenHeight: number;
+  isLoading = true;
 
   @HostListener('window:resize', ['$event'])
 
@@ -31,6 +32,10 @@ export class AppComponent implements OnInit, OnChanges{
     } else {
       this.isMobileScreen = false;
     }
+
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 2000);
   }
 
   ngOnChanges(): void {
@@ -43,9 +48,6 @@ export class AppComponent implements OnInit, OnChanges{
 
   openSidebar(): void {
     this.openMenu = !this.openMenu;
-  }
-  backToTop(): void {
-    window.scrollTo(0,0)
   }
 
   menuClose(value): void {
