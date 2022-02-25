@@ -1,0 +1,29 @@
+.loading {
+    // z-index: 1000;
+    &__section {
+        @apply w-screen h-screen flex justify-center items-center;
+        // background-color: var(--darkbg)
+    }
+
+    &__image {
+        @apply relative;
+        width: 60px;
+        height: 60px;
+
+        &::before {
+            content: '';
+            @apply absolute rounded-full top-0 left-0 w-full h-full;
+            background-color: var(--primary--color);
+            z-index: -1;
+            animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+    }
+}
+
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
