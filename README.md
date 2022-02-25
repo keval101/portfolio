@@ -1,27 +1,17 @@
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+Hello, 
 
-## Development server
+I have created my portfolio with Angular, HTML, CSS
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Live Demo: https://kevalvadhiya.netlify.app 💻
 
-## Code scaffolding
+![image](https://user-images.githubusercontent.com/62419921/154943888-c88b8052-ed44-4d65-9104-e674eef7f967.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+To install follow below steps:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ 1. clone repo
+ 2. npm install
+ 3. ng serve
+ 4. open localhost:4200
