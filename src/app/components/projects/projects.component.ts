@@ -9,6 +9,13 @@ export class ProjectsComponent implements OnInit {
 
   projects = [
     {
+      image: '/assets/images/bhagavadGita.png',
+      detailText: 'I have created this project with Free Bhagavad Gita API. This is built with Angular, SCSS, HTML. I have showed all chapters with description and all verses with description user can read summary of verse. I have also add download functionality where user can download any verse as image. And make site SEO friendly.',
+      tags: ['HTML5', 'JAVA SCRIPT','SCSS', 'ANGULAR'],
+      liveDemo: 'https://bhagavad-gita.netlify.app',
+      sourceCode: 'https://github.com/keval101/BhagvadGita'
+    },
+    {
       image: '/assets/images/natours.png',
       detailText: 'This is a theme for a tourism company using pure CSS3 with creative animations. This project is from the advanced CSS course of Jonas Schmedtmann on Udemy.',
       tags: ['HTML5', 'CSS3', 'SCSS', 'JAVA SCRIPT'],
